@@ -1,0 +1,97 @@
+:root {
+  --bg: #f6f6f6;
+  --panel: #ffffff;
+  --text: #1d1d1d;
+  --muted: #6b6b6b;
+  --border: #d5d5d5;
+  --snake: #2f7f3a;
+  --food: #c83c3c;
+  --grid: #ececec;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  width: min(92vw, 460px);
+  margin: 24px auto;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.status {
+  display: flex;
+  gap: 10px;
+  font-size: 0.95rem;
+}
+
+.board-wrap {
+  border: 1px solid var(--border);
+  background: #fff;
+}
+
+#board {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.actions {
+  margin-top: 12px;
+}
+
+button {
+  appearance: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--text);
+  padding: 8px 12px;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+.touch-controls {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.hint {
+  margin: 12px 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+@media (min-width: 700px) {
+  .touch-controls {
+    display: none;
+  }
+}
